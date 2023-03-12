@@ -1,4 +1,4 @@
-#STM32_Embedded-_Projects
+STM32_Embedded-_Projects
 
 This is a package for developing embedded software for STM32 microcontrollers using the STM32CubeMX tool and the STM32CubeIDE development environment. The package includes drivers for various peripherals, as well as example projects that demonstrate how to use the drivers.
 
@@ -17,7 +17,7 @@ Contributions
 Contributions to this package are welcome! If you find a bug or have a feature request, please open an issue on the GitHub repository.
 
 License
-This package is released under the MIT license. See the LICENSE file for more information.
+This package is released under the  . See the LICENSE file for more information.
 
 References
 This package is based on the following references:
