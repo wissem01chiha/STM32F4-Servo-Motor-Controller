@@ -23,4 +23,5 @@ This package is released under the GNU General Public License v3 . See the LICEN
 This package is based on the following references:
 
 STMicroelectronics. (n.d.). STM32CubeMX User Manual. Retrieved from https://www.st.com/resource/en/user_manual/dm00104712-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
+
 STMicroelectronics. (n.d.). STM32CubeIDE User Manual. Retrieved from https://www.st.com/resource/en/user_manual/dm00607345-stm32cubeide-getting-started-stmicroelectronics.pdf
