@@ -12,7 +12,7 @@ int main(void) {
 	MX_TIM1_Init();
 	HAL_TIM_PWM_Start_IT(&htim1, TIM_CHANNEL_1);
 
-	TIM1->ARR = 19999; 			/*autoreload counter*/
+	TIM1->ARR = 19999; 				/*autoreload counter*/
 
 	while (1) {
 		/* to control a servo motor we need a PWM signal (pulse width modulation ) with a 50Hz frequency
