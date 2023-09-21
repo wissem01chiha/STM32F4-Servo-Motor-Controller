@@ -1,3 +1,7 @@
+![Static Badge](https://img.shields.io/badge/GNU-lic?style=gitlab&label=License%20&labelColor=rgb-rgb&color=rgb)
+ ![Static Badge](https://img.shields.io/badge/Beginner-lic?style=gitlab&label=Level&labelColor=rgb-rgb&color=rgb) 
+
+
 # STM32F4-Servo-Motor-Controller
  A minimalistic project for controlling servo motors using STM32F401 microcontroller.
 
