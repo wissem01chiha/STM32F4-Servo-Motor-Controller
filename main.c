@@ -5,15 +5,17 @@ static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
  
 int main(void) {
-	
-	HAL_Init();					/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-	SystemClock_Config();				/* Configure the system clock */
-	MX_GPIO_Init();					/* Initialize all configured peripherals */
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
+	/* Configure the system clock */				
+	SystemClock_Config();
+	/* Initialize all configured peripherals */				
+	MX_GPIO_Init();					
 	MX_TIM1_Init();
 	HAL_TIM_PWM_Start_IT(&htim1, TIM_CHANNEL_1);
 
-	TIM1->ARR = 19999; 				/*autoreload counter*/
-
+	/*autoreload counter*/
+	TIM1->ARR = 19999; 				
 	while (1) {
 		/* to control a servo motor we need a PWM signal (pulse width modulation ) with a 50Hz frequency
 		 * we use the HSI clock (16MHZ) with a prescale  of 15 so we have a 1 MHZ clock
@@ -23,11 +25,11 @@ int main(void) {
 		 * duty cycle of 0° is 0.05(1 ms /20 ms )
 		 * so our duty cycle will be between 0.05 and 0.1   */
 
-		TIM1->CCR1 = 1999; 		/* duty cycle=0.0999 -->180° */
-		HAL_Delay(1000); 		/* delay of 1000ms */ 
-		TIM1->CCR1 = 19; 		/* duty cycle =0.075 --> 90° */
+		TIM1->CCR1 = 1999; 	/* duty cycle=0.0999 -->180° */
+		HAL_Delay(1000); 	/* delay of 1000ms */ 
+		TIM1->CCR1 = 19; 	/* duty cycle =0.075 --> 90° */
 		HAL_Delay(1000);
-		TIM1->CCR1 = 998; 		/* duty cycle =0.0499 -->0° */
+		TIM1->CCR1 = 998; 	/* duty cycle =0.0499 -->0° */
 		HAL_Delay(1000); 
 	} 
 }
@@ -36,7 +38,6 @@ void SystemClock_Config(void) {
 	RCC_ClkInitTypeDef RCC_ClkInitStruct = { 0 };
 
 	/* Configure the main internal regulator output voltage */
-	 
 	__HAL_RCC_PWR_CLK_ENABLE();
 	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
@@ -55,9 +56,7 @@ void SystemClock_Config(void) {
 	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
 		Error_Handler();
 	}
-
-	/** Initializes the CPU, AHB and APB buses clocks
-	 */
+	/** Initializes the CPU, AHB and APB buses clocks*/
 	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
 			| RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;

@@ -1,27 +1,23 @@
-# STM32 Toolbox
-
-This is a package for developing embedded software for STM32 microcontrollers using the STM32CubeMX tool and the STM32CubeIDE development environment. The package includes drivers for various peripherals, as well as example projects that demonstrate how to use the drivers.
-
-# Features
-Drivers for various peripherals, including GPIO, timers, USART, SPI, I2C, and ADC.
-Example projects that demonstrate how to use the drivers to implement various functions, such as reading from sensors, controlling actuators, and communicating with other devices.
-Configuration files for the STM32CubeMX tool that make it easy to generate code for different STM32 microcontrollers and peripherals.
-Documentation that explains how to set up the development environment and use the drivers and example projects.
-# Usage
-To use this package, simply clone the repository to your local machine and import the drivers and example projects into your STM32CubeIDE workspace. The package includes a set of documentation files that explain how to use the drivers and example projects.
+# STM32F4-Servo-Motor-Controller
+ A minimalistic project for controlling servo motors using STM32F401 microcontroller.
 
 # Requirements
-This package requires the STM32CubeMX tool and the STM32CubeIDE development environment.
+ - Servo Motor MG995
+ - STM32  Microcontroller Board.
+ - STM32CubeMX Tool. 
+ - STM32CubeIDE Development Environment.
+ - USB-Mini USB adapter.
 
-# Contributions
-Contributions to this package are welcome! If you find a bug or have a feature request, please open an issue on the GitHub repository.
+# Demo 
 
-# License
-This package is released under the GNU General Public License v3 . See the LICENSE file for more information.
+<img src="demo.gif" alt="Alt Text" width="250" height="250"/>
 
 # References
 This package is based on the following references:
 
-STMicroelectronics. (n.d.). STM32CubeMX User Manual. Retrieved from https://www.st.com/resource/en/user_manual/dm00104712-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
+STMicroelectronics. (n.d.). STM32CubeMX User Manual.  https://www.st.com/resource/en/user_manual/dm00104712-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
 
-STMicroelectronics. (n.d.). STM32CubeIDE User Manual. Retrieved from https://www.st.com/resource/en/user_manual/dm00607345-stm32cubeide-getting-started-stmicroelectronics.pdf
+STMicroelectronics. (n.d.). STM32CubeIDE User Manual. https://www.st.com/resource/en/user_manual/dm00607345-stm32cubeide-getting-started-stmicroelectronics.pdf
+
+# License
+This package is released under the GNU General Public License v3. See the LICENSE file for more information.
